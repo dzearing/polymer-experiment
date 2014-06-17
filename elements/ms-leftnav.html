@@ -1,0 +1,115 @@
+<link rel="import" href="../bower_components/polymer/polymer.html" />
+
+<polymer-element name="ms-leftnav" noscript>
+
+<template>
+  <style>
+    :host {
+      position: absolute;
+      left: 0;
+      top: 40px;
+      bottom: 0;
+      width: 180px;
+      background: #f3f3f3;
+    }
+
+    .searchBox {
+      margin: 10px;
+      border: 1px solid #CCC;
+      background: white;
+      height: 28px;
+      line-height: 26px;
+      padding: 0 8px;
+      color : #666;
+      position: relative;
+    }
+
+    .searchBox .imgMask {
+      position: absolute;
+      right: 8px;
+      top: 6px;
+    }
+
+    .section {
+        display: block;
+        height: 32px;
+        line-height: 30px;
+        padding: 0 18px;
+        white-space: nowrap;
+        text-decoration: none;
+        color: black;
+    }
+
+    .section.big {
+        font-size: 150%;
+        font-family: 'Segoe UI Light';
+    }
+
+    .section.heading {
+        margin-top: 20px;
+    }
+
+    .section.selected {
+        background: #d4d4d4;
+    }
+
+    .section:not(.selected):hover {
+        background: #e7e7e7;
+    }
+
+    .c-QuotaPane {
+        margin: 40px 20px 10px 20px;
+        border-top: 1px solid #CCC;
+        padding: 10px 0;
+    }
+
+    .c-QuotaPane .quota {
+        display: inline-block;
+        height: 32px;
+        line-height: 30px;
+        color: #666;
+    }
+
+    .c-QuotaPane .link {
+        display: inline-block;
+        height: 32px;
+        line-height: 30px;
+
+        white-space: nowrap;
+        text-decoration: none;
+        color: rgba(9,74,178,1);
+    }
+
+    .c-QuotaPane .link:hover {
+        color: rgba(9,74,178,.8);
+    }
+
+  </style>
+
+  <div class="searchBox">
+      <span>Search SkyDrive</span>
+      <span class="imgMask" style="width: 16px; height: 16px; background-image: url('images/command2.png'); background-position: -143px 0"></span>
+  </div>
+
+  <div class="scrollArea">
+      <a class="big section selected" href="#">Files</a>
+      <a class="big section" href="#">Recent docs</a>
+      <a class="big section" href="#">All photos</a>
+      <a class="big section" href="#">Shared</a>
+      <a class="big section heading" href="#">Groups</a>
+      <a class="section" href="#">The Pony Clan</a>
+      <a class="big section heading" href="#">PCs</a>
+      <a class="section" href="#">dzearing-laptop</a>
+      <a class="section" href="#">DZEARING-MAIN3</a>
+      <a class="section" href="#">Spanky</a>
+      <div class="c-QuotaPane">
+          <div class="quota">37.4GB available</div>
+          <a class="link" href="#">Recycle bin</a>
+          <a class="link" href="#">Manage storage</a>
+          <a class="link" href="#">Get SkyDrive apps</a>
+      </div>
+  </div>
+
+</template>
+
+</polymer-element>
